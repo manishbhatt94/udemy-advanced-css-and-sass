@@ -1,17 +1,9 @@
-/*
-COLORS:
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
-:root {
-  --color-light-green: #7ed56f;
-  --color-medium-green: #55c57a;
-  --color-dark-green: #28b485;
-}
+$color-grey-dark: #777;
+$color-white: #fff;
 
 html {
   box-sizing: border-box;
@@ -30,7 +22,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3rem;
 }
 
@@ -39,8 +31,8 @@ body {
   height: 95vh;
   background-image: linear-gradient(
       to right bottom,
-      /* --color-light-green with 0.8 opacity */ rgba(126, 213, 111, 0.8),
-      /* --color-dark-green with 0.8 opacity */ rgba(40, 180, 133, 0.8)
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
     ),
     url(../img/hero.jpg);
   background-size: cover;
@@ -67,7 +59,7 @@ body {
 }
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
@@ -155,8 +147,8 @@ body {
 }
 
 .btn--white {
-  background-color: #fff;
-  color: #777;
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 
 .btn::after {
@@ -172,7 +164,7 @@ body {
 }
 
 .btn--white::after {
-  background-color: #fff;
+  background-color: $color-white;
 }
 
 .btn:hover::after {
