@@ -10,11 +10,11 @@
     border-radius: 5rem;
     transition: all 0.2s;
     position: relative;
-    font-size: 1.6rem;
+    font-size: variables.$default-font-size;
   }
 
   &:hover {
-    transform: translateY(-0.3rem);
+    transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(variables.$color-black, 0.2);
 
     &::after {
@@ -24,7 +24,7 @@
   }
 
   &:active {
-    transform: translateY(-0.1rem);
+    transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(variables.$color-black, 0.2);
   }
 
@@ -52,5 +52,30 @@
   &--animated {
     animation: moveInBottom 0.5s ease-out 0.6s;
     animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    color: variables.$color-primary;
+    text-decoration: none;
+    border-bottom: 1px solid variables.$color-primary;
+    padding: 3px;
+    font-size: variables.$default-font-size;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: variables.$color-primary;
+    color: variables.$color-white;
+    box-shadow: 0 1rem 2rem rgba(variables.$color-black, 0.2);
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(variables.$color-black, 0.2);
   }
 }
